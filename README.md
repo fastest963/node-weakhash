@@ -1,6 +1,9 @@
 # WeakHash #
 
-Unlike a [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap), a WeakHash accepts a primitive value as the key.
+Unlike a [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap),
+a WeakHash accepts a primitive value as the key.
+
+Utilizes [node-weak](https://github.com/TooTallNate/node-weak) for weak references.
 
 ## Docs ##
 
