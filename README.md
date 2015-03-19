@@ -1,7 +1,7 @@
 # WeakHash #
 
 Unlike a [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap),
-a WeakHash accepts a primitive value as the key.
+a WeakHash requires a primitive value as the key and an object as the value.
 
 Utilizes [node-weak](https://github.com/TooTallNate/node-weak) for weak references.
 
@@ -13,11 +13,13 @@ Creates a new empty WeakHash.
 ### hash.get(id [,value]) ###
 Returns the stored value for `id`. If `id` is not found and `value` is passed, `value` be stored for `id`.
 
+`id` must be a primitive and `value` must be an object.
+
 ### hash.set(id, value) ###
-Stores `value` for `id`.
+Stores `value` for `id`. `id` must be a primitive and `value` must be an object.
 
 ### hash.delete(id) ###
-Delete value stored for `id`.
+Delete value stored for `id`. `id` must be a primitive.
 
 
 By [James Hartig](https://github.com/fastest963/)
