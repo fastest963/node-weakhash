@@ -5,6 +5,15 @@ a WeakHash requires a primitive value as the key and an object as the value.
 
 Utilizes [node-weak](https://github.com/TooTallNate/node-weak) for weak references.
 
+## Usage ##
+
+```
+var WeakHash = require('weakhash');
+var hash = new WeakHash();
+hash.set('testArr', []);
+hash.get('testArr'); //returns []
+```
+
 ## Docs ##
 
 ### new WeakHash() ###
