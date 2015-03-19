@@ -29,12 +29,10 @@ WeakHash.prototype.set = function(id, value) {
     if (id === undefined || typeof id === 'object') {
         throw new TypeError('Invalid id passed to WeakHash.set');
     }
-    if (this.map[id] === undefined) {
-        if (typeof value !== 'object') {
-            throw new TypeError('Invalid object value passed to WeakHash.set');
-        }
-        this.map[id] = weak(value, getBoundRemove(this, id));
+    if (typeof value !== 'object') {
+        throw new TypeError('Invalid object value passed to WeakHash.set');
     }
+    this.map[id] = weak(value, getBoundRemove(this, id));
     return weak.get(this.map[id]);
 };
 
