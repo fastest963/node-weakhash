@@ -1,11 +1,11 @@
 # WeakHash #
 
-Unlike a WeakMap, a WeakHash accepts a primitive value as the key.
+Unlike a [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap), a WeakHash accepts a primitive value as the key.
 
 ## Docs ##
 
 ### new WeakHash() ###
-Creates a new WeakHash for objects.
+Creates a new empty WeakHash.
 
 ### hash.get(id [,value]) ###
 Returns the stored value for `id`. If `id` is not found and `value` is passed, `value` be stored for `id`.
