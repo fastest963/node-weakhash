@@ -2,7 +2,7 @@
   "name": "weakhash",
   "version": "0.1.0",
   "description": "Weak-referenced hashmap",
-  "main": "map.js",
+  "main": "hash.js",
   "directories": {
     "test": "tests"
   },
@@ -21,8 +21,9 @@
   },
   "keywords": [
     "weak",
-    "stringmap",
-    "strings",
+    "weakmap",
+    "hashmap",
+    "hash",
     "map",
     "dictionary"
   ],
