@@ -1,13 +1,16 @@
 var weak = require('weak');
 
-function getBoundRemove(context, id) {
+function getBoundRemove(weakContext, id) {
     return function() {
+        var context = weak.get(weakContext);
         context.delete(id);
     };
 }
 
 function WeakHash() {
     this.map = {};
+    delete this.map.a; //don't let V8 try to optimize this with hidden classes
+    this.weakCtx = weak(this);
 }
 
 WeakHash.prototype.get = function(id, value) {
@@ -32,7 +35,7 @@ WeakHash.prototype.set = function(id, value) {
     if (typeof value !== 'object') {
         throw new TypeError('Invalid object value passed to WeakHash.set');
     }
-    this.map[id] = weak(value, getBoundRemove(this, id));
+    this.map[id] = weak(value, getBoundRemove(this.weakCtx, id));
     return weak.get(this.map[id]);
 };
 
