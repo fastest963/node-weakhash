@@ -1,6 +1,6 @@
 {
   "name": "weakhash",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Weak-referenced hashmap",
   "main": "hash.js",
   "directories": {
