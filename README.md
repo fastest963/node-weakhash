@@ -30,5 +30,8 @@ Stores `value` for `id`. `id` must be a primitive and `value` must be an object.
 ### hash.delete(id) ###
 Delete value stored for `id`. `id` must be a primitive.
 
+### hash.count() ###
+Returns the number of elements in the hash.
+
 
 By [James Hartig](https://github.com/fastest963/)

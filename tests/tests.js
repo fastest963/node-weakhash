@@ -33,11 +33,20 @@ exports.getSet = function(test) {
     test.done();
 };
 
-exports.delete = function(test) {
+exports['delete'] = function(test) {
     var map = new WeakHash(),
         ref = map.set('test', new String('test'));
     test.strictEqual(map.get('test'), ref);
     map.delete('test');
     test.strictEqual(map.get('test'), undefined);
+    test.done();
+};
+
+exports.count = function(test) {
+    var map = new WeakHash(),
+        ref = map.set('test', new String('test'));
+    test.equal(map.count(), 1);
+    map.delete('test');
+    test.equal(map.count(), 0);
     test.done();
 };

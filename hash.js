@@ -43,4 +43,15 @@ WeakHash.prototype['delete'] = function(id) {
     delete this.map[id];
 };
 
+WeakHash.prototype.count = function() {
+    var count = 0,
+        k;
+    for (k in this.map) {
+        if (this.map.hasOwnProperty(k)) {
+            count++;
+        }
+    }
+    return count;
+};
+
 module.exports = WeakHash;
