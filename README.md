@@ -3,7 +3,8 @@
 Unlike a [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap),
 a WeakHash requires a primitive value as the key and an object as the value.
 
-Utilizes [node-weak](https://github.com/TooTallNate/node-weak) for weak references.
+Utilizes [node-weak](https://github.com/TooTallNate/node-weak) for weak references. Therefore this will **not** work in
+browsers.
 
 ## Usage ##
 
